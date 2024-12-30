@@ -10,12 +10,12 @@ import tempfile
 # Define the Chatbot API URL and headers
 api_url = "https://llm.kindo.ai/v1/chat/completions"
 headers = {
-    "api-key": "09e75bff-6192-436d-936e-2d0f9230a3a6-a896f6311e363485",  # Replace with your API key
+    "api-key": "",  # Replace with your API key
     "content-type": "application/json"
 }
 
 # Initialize ElevenLabs client
-elevenlabs_client = ElevenLabs(api_key="ae38aba75e228787e91ac4991fc771f8")  # Replace with your ElevenLabs API key
+elevenlabs_client = ElevenLabs(api_key="")  # Replace with your ElevenLabs API key
 
 # Function to extract text from PDF
 def extract_text_from_pdf(file):
@@ -112,7 +112,7 @@ def main():
                 st.session_state.qa_history.append((question, answer))
                 
                 # Convert answer to speech
-                text_to_speech(answer, voice_id="ersxGpVMrHVtVO398Vc5")  # Replace with your ElevenLabs voice ID
+                text_to_speech(answer, voice_id="")  # Replace with your ElevenLabs voice ID
 
         # Display Q&A history
         if st.session_state.qa_history:
